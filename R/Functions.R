@@ -2092,7 +2092,7 @@ polish.graph = function (G,path,lncs)
   if (path==2 & organism.detected=='mouse' & code.detected=='gene.name') org.ann=as.list(gene.names1)
   
   if(path==1| path==2| path==4) regulators=unique(unlist(org.ann[regulators.entrez]))
-  if(path==3| path==5) regulators=regulators.entrez
+  if(path==3| path==5) regulators=unique(regulators.entrez)
 print(sprintf('Recognized regultors  %g',length(regulators)))
    
   
